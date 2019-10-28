@@ -11,12 +11,21 @@ state = {
 }
 
 // Performing a GET request to retrive all phonebook
-componentWillMount() {
-  axios.get("https://code-catalist-phone-book-rails.herokuapp.com/contacts").then((response) =>{
-    this.setState({
-      books:response.data
-      })
-  });
+// componentWillMount() {
+//   axios.get("https://code-catalist-phone-book-rails.herokuapp.com/contacts").then((response) =>{
+//     this.setState({
+//       books:response.data
+//       })
+//   });
+// }
+
+componentDidMount() {
+  const url = 'https://code-catalist-phone-book-rails.herokuapp.com/contacts'
+  axios.get(url).then(response => response.data)
+  .then((data) => {
+    this.setState({ books: data })
+    console.log(this.state.books)
+   })
 }
 
 
@@ -28,8 +37,8 @@ render() {
       <tr key={book.id}>
         <td data-column="First Name">{book.name}</td>
         <td data-column="Last Name">{book.phone_number}</td>
-        <td data-column="Job Title"><i class="fa fa-edit"></i></td>
-        <td data-column="Twitter"><i class="fas fa-backspace" style={{color: 'red'}}></i></td>
+        <td data-column="Job Title"><i className="fa fa-edit"></i></td>
+        <td data-column="Twitter"><i className="fas fa-backspace" style={{color: 'red'}}></i></td>
       </tr>
       )
 
@@ -41,17 +50,17 @@ render() {
     <div className="App">
       <nav >
         <div className="Part-one">
-          <span class="fa-stack fa-3x">
-            <i class="fa fa-circle fa-stack-2x"></i>
-            <i class="fa fa-phone-alt fa-stack-1x fa-inverse"></i>
+          <span className="fa-stack fa-3x">
+            <i className="fa fa-circle fa-stack-2x"></i>
+            <i className="fa fa-phone-alt fa-stack-1x fa-inverse"></i>
           </span>
         </div>
         <div className="Part-two">
-          <span class="fa-stack fa-3x">
-            <i class="fa fa-square fa-stack-2x"></i>
-            <i class="fa fa-user fa-stack-1x fa-inverse"></i>
+          <span className="fa-stack fa-3x">
+            <i className="fa fa-square fa-stack-2x"></i>
+            <i className="fa fa-user fa-stack-1x fa-inverse"></i>
           </span>
-          Admin Admin <i class="fa fa-angle-down" style={{color: '#3498db'}}></i>
+          Admin Admin <i className="fa fa-angle-down" style={{color: '#3498db'}}></i>
         </div>
       </nav>
 
@@ -76,11 +85,11 @@ render() {
         </tbody>
       </table>
 
-      {/* <button className="button btn"><i class="fa fa-plus"></i> Add Contact</button> */}
+      {/* <button className="button btn"><i className="fa fa-plus"></i> Add Contact</button> */}
       {/* Link to add new phone book */}
-        <Link to="/Add" className="button" target="_blank"><i class="fa fa-plus"></i>
-            Add Contact
-        </Link>
+      <Link to="/Add" className="button" target="_blank"><i className="fa fa-plus"></i>
+        Add Contact
+      </Link>
 
       <footer>
         <p>&copy;All Right Are  Reserved</p>

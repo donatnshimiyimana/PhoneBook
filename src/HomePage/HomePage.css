@@ -4,13 +4,13 @@ nav {
     height: 120px;
     width: 100%;
   }
-  
+
   nav .Part-one {
     float: left;
     margin-top: 10px;
     margin-left: 100px;
   }
-  
+
   nav .Part-two {
     float: right;
     margin-top: 10px;
@@ -21,51 +21,51 @@ nav {
     height: 120px;
     width: 100%;
   }
-  
+
   nav .Part-one {
     float: left;
     margin-top: 10px;
     margin-left: 100px;
   }
-  
+
   nav .Part-two {
     float: right;
     margin-top: 10px;
     margin-right: 100px;
   }
   /* End Naviagation Part */
-  
+
   /* Heading */
   .App-header {
     text-align: center;
     /* margin-top: 200px; */
   }
-  
-  
+
+
   /* Table Part */
   table {
       width: 750px;
       border-collapse: collapse;
       margin:50px auto;
   }
-  
+
   tr:nth-of-type(odd) {
       background: #eee;
       }
-  
+
   th {
       background: #3498db;
       color: white;
       font-weight: bold;
   }
-  
+
   td, th {
       padding: 10px;
       border: 1px solid #ccc;
       text-align: left;
       font-size: 18px;
   }
-  
+
   /* Responsive for small screen of navigation */
   @media
   only screen and (max-width: 760px),
@@ -75,13 +75,13 @@ nav {
       height: 150px;
       width: 100%;
     }
-  
+
     nav .Part-one {
       float: left;
       margin-top: 20px;
       margin-left: 10px;
     }
-  
+
     nav .Part-two {
       float: right;
       margin-top: 20px;
@@ -92,25 +92,25 @@ nav {
   @media
   only screen and (max-width: 760px),
   (min-device-width: 768px) and (max-device-width: 1024px)  {
-  
+
     table {
       width: 100%;
     }
-  
+
     /* Force table to not be like tables anymore */
     table, thead, tbody, th, td, tr {
       display: block;
     }
-  
+
     /* Hide table headers (but not display: none;, for accessibility) */
     thead tr {
       position: absolute;
       top: -9999px;
       left: -9999px;
     }
-  
+
       tr { border: 1px solid #ccc; }
-  
+
     td {
       /* Behave  like a "row" */
       border: none;
@@ -118,7 +118,7 @@ nav {
       position: relative;
       padding-left: 50%;
     }
-  
+
       td:before {
           /* Now like a table header */
           position: absolute;
@@ -130,15 +130,14 @@ nav {
           white-space: nowrap;
           /* Label the data */
           content: attr(data-column);
-  
           color: #000;
           font-weight: bold;
       }
-  
+
   }
   /* End form part */
-  
-  
+
+
   /*Add Button part */
   .button {
     background-color: #4CAF50; /* Green */
@@ -148,11 +147,10 @@ nav {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
     margin-left: 280px;
     cursor: pointer;
   }
-  
+
   /* Thee footer part */
   footer {
     position: fixed;
@@ -164,15 +162,15 @@ nav {
     text-align: center;
   }
   /* End Naviagation Part */
-  
+
   /* Heading */
   .App-header {
     text-align: center;
     /* margin-top: 200px; */
   }
-  
-  
-  
+
+
+
   /* Responsive for small screen of navigation */
   @media
   only screen and (max-width: 760px),
@@ -182,26 +180,26 @@ nav {
       height: 150px;
       width: 100%;
     }
-  
+
     nav .Part-one {
       float: left;
       margin-top: 20px;
       margin-left: 10px;
     }
-  
+
     nav .Part-two {
       float: right;
       margin-top: 20px;
       margin-right: 10px;
     }
   }
-  
+
   .item1 { grid-area: header; }
   .item2 { grid-area: menu; }
   .item3 { grid-area: main; }
   .item4 { grid-area: right; }
   .item5 { grid-area: footer; }
-  
+
   .grid-container {
     display: grid;
     grid-template-areas:
@@ -211,14 +209,14 @@ nav {
     background-color: #2196F3;
     padding: 10px;
   }
-  
+
   .grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 20px 0;
     font-size: 30px;
   }
-  
+
   .camera {
     display: grid;
     background: red;
@@ -226,7 +224,7 @@ nav {
     width: 410px;
     float: right;
   }
-  
+
   /* Thee footer part */
   footer {
     position: fixed;
