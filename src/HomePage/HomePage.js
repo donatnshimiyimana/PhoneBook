@@ -6,27 +6,20 @@ import axios from 'axios';
 export class HomePage extends Component {
 
   //State declaration
-state = {
-  books: [],
-}
+  state = {
+    books: [],
+  }
 
-// Performing a GET request to retrive all phonebook
-// componentWillMount() {
-//   axios.get("https://code-catalist-phone-book-rails.herokuapp.com/contacts").then((response) =>{
-//     this.setState({
-//       books:response.data
-//       })
-//   });
-// }
+  componentDidMount() {
+    const url = 'https://code-catalist-phone-book-rails.herokuapp.com/contacts'
+    axios.get(url).then(response => response.data)
+    .then((data) => {
+      this.setState({ books: data })
+      console.log(this.state.books)
+    })
+  }
 
-componentDidMount() {
-  const url = 'https://code-catalist-phone-book-rails.herokuapp.com/contacts'
-  axios.get(url).then(response => response.data)
-  .then((data) => {
-    this.setState({ books: data })
-    console.log(this.state.books)
-   })
-}
+
 
 
 
@@ -37,7 +30,11 @@ render() {
       <tr key={book.id}>
         <td data-column="First Name">{book.name}</td>
         <td data-column="Last Name">{book.phone_number}</td>
-        <td data-column="Job Title"><i className="fa fa-edit"></i></td>
+        <td data-column="Job Title">
+          <Link to={`/Edit/${book.id}`} target="_blank">
+            <i className="fa fa-edit"></i>
+          </Link>
+        </td>
         <td data-column="Twitter"><i className="fas fa-backspace" style={{color: 'red'}}></i></td>
       </tr>
       )
@@ -88,7 +85,7 @@ render() {
       {/* <button className="button btn"><i className="fa fa-plus"></i> Add Contact</button> */}
       {/* Link to add new phone book */}
       <Link to="/Add" className="button" target="_blank"><i className="fa fa-plus"></i>
-        Add Contact
+        Add Phone Book
       </Link>
 
       <footer>
