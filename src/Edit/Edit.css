@@ -1,24 +1,84 @@
 .add {
-    display: flex;
-    width: 800px;
-    margin: 0 auto;
-    margin-top: 41px;
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 41px;
+}
+
+.camerana {
+  width: 300px;
+  margin-left: 62px;
+  margin-right: 30px;
+  margin-bottom: 150px;
+  background-color: rgb(93, 101, 110);
+}
+
+.icons {
+  color: rgb(255, 255, 255);
+  margin-left: 40%;
+  margin-top: 20%;
+}
+
+.add .add-form form input {
+  width: 250px;
+  padding: 10px 0;
+  margin-bottom:30px;
+  border: none;
+  border-bottom: 1px solid black;
+  outline: none;
+  background: transparent;
+}
+
+  .add .add-form form .label {
+    margin-left: -330px;
   }
-  
+  .add .add-form form .placeholder {
+    width: 585px;
+    margin-left: -330px;
+  }
+
+.btn {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 280px;
+  cursor: pointer;
+  margin-left: -330px;
+}
+.btn i {
+  margin-right: 10px;
+}
+
+/*************  media queries section  ***************/
+
+@media
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+  .add {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
   .camerana {
-    width: 300px;
-    margin-left: 62px;
-    margin-right: 30px;
-    margin-bottom: 150px;
+    width: 200px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 200px;
     background-color: rgb(93, 101, 110);
   }
-  
+
   .icons {
     color: rgb(255, 255, 255);
-    margin-left: 40%;
+    margin-left: 28%;
     margin-top: 20%;
   }
-  
+
   .add .add-form form input {
     width: 250px;
     padding: 10px 0;
@@ -28,15 +88,15 @@
     outline: none;
     background: transparent;
   }
-  
+
   .add .add-form form .label {
-    margin-left: -330px;
+    margin-left: -220px;
   }
   .add .add-form form .placeholder {
-    width: 585px;
-    margin-left: -330px;
+    width: 470px;
+    margin-left: -220px;
   }
-  
+
   .btn {
     background-color: #4CAF50; /* Green */
     border: none;
@@ -47,71 +107,9 @@
     display: inline-block;
     margin-left: 280px;
     cursor: pointer;
-    margin-left: -330px;
+    margin-left: -220px;
   }
   .btn i {
     margin-right: 10px;
   }
-  
-  /*************  media queries section  ***************/
-  
-  @media
-  only screen and (max-width: 760px),
-  (min-device-width: 768px) and (max-device-width: 1024px)  {
-    .add {
-      display: flex;
-      width: 100%;
-      margin: 0 auto;
-      margin-top: 20px;
-    }
-  
-    .camerana {
-      width: 200px;
-      margin-left: 20px;
-      margin-right: 20px;
-      margin-bottom: 200px;
-      background-color: rgb(93, 101, 110);
-    }
-  
-    .icons {
-      color: rgb(255, 255, 255);
-      margin-left: 28%;
-      margin-top: 20%;
-    }
-  
-    .add .add-form form input {
-      width: 250px;
-      padding: 10px 0;
-      margin-bottom:30px;
-      border: none;
-      border-bottom: 1px solid black;
-      outline: none;
-      background: transparent;
-    }
-  
-    .add .add-form form .label {
-      margin-left: -220px;
-    }
-    .add .add-form form .placeholder {
-      width: 470px;
-      margin-left: -220px;
-    }
-  
-    .btn {
-      background-color: #4CAF50; /* Green */
-      border: none;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      margin-left: 280px;
-      cursor: pointer;
-      margin-left: -220px;
-    }
-    .btn i {
-      margin-right: 10px;
-    }
-  
-  
-  }
+}

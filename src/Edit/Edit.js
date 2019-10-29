@@ -2,16 +2,18 @@ import React from 'react';
 import './Edit.css';
 import axios from 'axios'
 
+const initialState = {
+    name: '',
+    phone_number: '',
+    name_error:'',
+    number_error:'',
+}
+
 export class Edit extends React.Component{
 
     constructor(props){
         super(props)
-        this.state = {
-            name: '',
-            phone_number: '',
-            name_error:'',
-            number_error:'',
-        }
+        this.state = initialState;
     }
 
     async componentDidMount() {
@@ -59,18 +61,17 @@ export class Edit extends React.Component{
 
         const isValid = this.validate();
         if (isValid) {
-        console.log(this.state)
-        axios.put(`https://code-catalist-phone-book-rails.herokuapp.com/contacts/${id}`,this.state)
-        .then(response =>{
-            console.log(response)
-        })
-        .catch(error =>{
-            console.log(error)
-        })
-
-        this.props.history.push('/');
-
+            console.log(this.state)
+            axios.put(`https://code-catalist-phone-book-rails.herokuapp.com/contacts/${id}`,this.state)
+            .then(response =>{
+                console.log(response)
+            })
+            this.setState(initialState);
         }
+    }
+
+    _refreshPhoneBook() {
+
     }
 
 

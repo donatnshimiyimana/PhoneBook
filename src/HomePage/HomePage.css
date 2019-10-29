@@ -66,6 +66,10 @@ nav {
       font-size: 18px;
   }
 
+  td, .delete-btn, i {
+    color: rgb(160, 8, 46);
+  }
+
   /* Responsive for small screen of navigation */
   @media
   only screen and (max-width: 760px),
