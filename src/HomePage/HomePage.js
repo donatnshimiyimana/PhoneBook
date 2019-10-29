@@ -19,7 +19,23 @@ export class HomePage extends Component {
     })
   }
 
+onDelete = (id) => {
+  axios.delete(`https://code-catalist-phone-book-rails.herokuapp.com/contacts/${id}`).then(response =>{
 
+  this.setState({errorMessage:'destroyed'});
+  this.props.deleteHandler();
+
+  }).catch(error =>{
+      this.setState({errorMessage:'error'});
+  })
+}
+
+deleteHandler(id) {
+  const {books} = this.state;
+  this.setState({
+      contacts: books.filter(book => book.id !== id)
+  })
+}
 
 
 
@@ -35,7 +51,7 @@ render() {
             <i className="fa fa-edit"></i>
           </Link>
         </td>
-        <td data-column="Twitter"><i className="fas fa-backspace" style={{color: 'red'}}></i></td>
+        <td data-column="Twitter"><i className="fas fa-backspace" style={{color: 'red'}} onClick={this.onDelete.bind(this, book.id)}></i></td>
       </tr>
       )
 
