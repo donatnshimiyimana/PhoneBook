@@ -79,7 +79,7 @@ only screen and (max-width: 760px),
     background-color: rgb(93, 101, 110);
   }
 
-  ..fa-arrow-left {
+  .fa-arrow-left {
     margin-left: -0px;
     margin-top: 10px;
     color: rgb(0, 0, 0);
