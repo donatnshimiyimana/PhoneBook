@@ -69,23 +69,23 @@ export class Details extends React.Component{
                         </div>
                     </div>
                     <div className="details">
-                    <ul>
-                        <li>
-                            <i className="fas fa-phone-alt fa-lg"></i>
-                            {this.state.phone_number} <br/>
-                            <small className="small">Mobile</small></li>
-                        <li>
-                            <i className="fas fa-home fa-lg"></i>
-                            5678967896 <br/>
-                            <small className="small">Home</small>
+                        <ul>
+                            <li>
+                                <i className="fas fa-phone-alt fa-lg"></i>
+                                {this.state.phone_number} <br/>
+                                <small className="small">Mobile</small></li>
+                            <li>
+                                <i className="fas fa-home fa-lg"></i>
+                                026 67308820 <br/>
+                                <small className="small">Home</small>
+                                </li>
+                            <li>
+                                <i className="fas fa-envelope fa-lg"></i>
+                                AvaDoi_16@gmail.com <br/>
+                                <small className="small">Email</small>
                             </li>
-                        <li>
-                            <i className="fas fa-envelope fa-lg"></i>
-                            AvaDoi_16@gmail.com <br/>
-                            <small className="small">Email</small>
-                        </li>
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
                 </div>
 
                 {/* Footer Part */}

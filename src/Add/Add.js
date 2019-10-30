@@ -85,6 +85,7 @@ export class Add extends React.Component{
 
                 {/* Add New Phone Book Part */}
                 <div>
+                    <i class="fas fa-arrow-left"></i>
                     <div className="add">
                         <div className="camerana">
                             <i className="fas fa-camera fa-5x icons"></i>

@@ -13,6 +13,12 @@
   background-color: rgb(93, 101, 110);
 }
 
+.fa-arrow-left {
+  margin-left: 310px;
+  margin-top: 10px;
+  color: rgb(0, 0, 0);
+}
+
 .icons {
   color: rgb(255, 255, 255);
   margin-left: 40%;
@@ -71,6 +77,12 @@ only screen and (max-width: 760px),
     margin-right: 20px;
     margin-bottom: 200px;
     background-color: rgb(93, 101, 110);
+  }
+
+  ..fa-arrow-left {
+    margin-left: -0px;
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
   }
 
   .icons {
