@@ -16,9 +16,17 @@ export class HomePage extends Component {
 
   onDelete(id) {
     axios.delete(`https://code-catalist-phone-book-rails.herokuapp.com/contacts/${id}`)
-    .then((response) =>{
-      this._refreshPhoneBook();
-    })
+    let callContact = this.state.books
+    for (let i = 0; i <= callContact.length; i++)
+    {
+      let book = callContact[i]
+      if (book.id === id)
+      {
+        callContact.splice(i,1)
+        break
+      }
+    }
+    this.setState( {books:callContact} )
   }
 
   _refreshPhoneBook() {
